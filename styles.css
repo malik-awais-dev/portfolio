@@ -630,6 +630,50 @@ h2.section-title {
     text-align: right;
 }
 
+/* TOOL ROWS — replaces skill bars */
+
+.tool-row {
+    display: grid;
+    grid-template-columns: 130px 160px 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(42, 42, 42, 0.18);
+}
+
+.tool-row:first-child {
+    padding-top: 0;
+}
+
+.tool-row:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.tool-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #2a2a2a;
+}
+
+.tool-role {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    letter-spacing: -0.01em;
+}
+
+.tool-proof {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: #6b6b6b;
+    letter-spacing: 0.02em;
+}
+
 /* SERVICES GRID */
 
 .services-grid {
@@ -812,6 +856,36 @@ h2.section-title {
     line-height: 1.6;
     color: #555;
     margin-top: 12px;
+}
+
+.project-results {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(42, 42, 42, 0.2);
+    list-style: none;
+    display: grid;
+    gap: 6px;
+    padding-left: 0;
+}
+
+.project-results li {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: #2a2a2a;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    align-items: baseline;
+}
+
+.result-key {
+    color: #999;
+    letter-spacing: 0.06em;
+}
+
+.result-value {
+    color: #2a2a2a;
+    letter-spacing: 0.02em;
 }
 
 /* ============================================
@@ -1153,6 +1227,27 @@ h2.section-title {
 
     .skill-percent {
         text-align: left;
+    }
+
+    .tool-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 12px 0;
+    }
+
+    .tool-role {
+        font-size: 0.875rem;
+    }
+
+    .project-results {
+        margin-top: 14px;
+        padding-top: 12px;
+    }
+
+    .project-results li {
+        grid-template-columns: 100px 1fr;
+        gap: 10px;
+        font-size: 0.7rem;
     }
 
     .toolkit-box {
