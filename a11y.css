@@ -1,0 +1,20 @@
+/* Accessibility & progressive-enhancement layer */
+
+/* Reduced motion: skip reveal animations entirely */
+@media (prefers-reduced-motion: reduce) {
+    .wire-box,
+    .section-label {
+        opacity: 1 !important;
+        animation: none !important;
+        transition: none !important;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+    .progress-fill {
+        transition: none;
+    }
+}
+
+/* No-JS fallback is handled by the <noscript> block in index.html;
+   this file only guards the motion path. */
