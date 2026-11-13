@@ -1,5 +1,24 @@
 /* Accessibility & progressive-enhancement layer */
 
+/* Skip link: hidden until keyboard-focused */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    z-index: 100;
+    padding: 10px 16px;
+    background: #2a2a2a;
+    color: #f7f5ee;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
 /* Reduced motion: skip reveal animations entirely */
 @media (prefers-reduced-motion: reduce) {
     .wire-box,
